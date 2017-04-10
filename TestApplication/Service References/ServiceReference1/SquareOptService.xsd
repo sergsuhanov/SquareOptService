@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/glassCAD.WCF.SquareOpt" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/glassCAD.WCF.SquareOpt" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/Opt/SquareOptService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="Document">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CutDepth" type="tns:CutDepth" />
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DestinationCount" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DestinationSquare" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Destinations" nillable="true" type="tns:ArrayOfDestination" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IsOptimized" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastDestinationHeight" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="LastDestinationWidth" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxLenCuttingX" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxLenCuttingY" type="xs:int" />
+      <xs:element minOccurs="0" name="PlateCount" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PlateSquare" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Plates" nillable="true" type="tns:ArrayOfPlate" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WastePercentA" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="WastePercentB" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="WasteSquare" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="WasteTrashSquare" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="WasteWorkSquare" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Document" nillable="true" type="tns:Document" />
+  <xs:simpleType name="CutDepth">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Max" />
+      <xs:enumeration value="Z">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="W">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CutDepth" nillable="true" type="tns:CutDepth" />
+  <xs:complexType name="ArrayOfDestination">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Destination" nillable="true" type="tns:Destination" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDestination" nillable="true" type="tns:ArrayOfDestination" />
+  <xs:complexType name="Destination">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="B" type="xs:int" />
+      <xs:element minOccurs="0" name="CarryOverWidth" type="xs:int" />
+      <xs:element minOccurs="0" name="Height" type="xs:int" />
+      <xs:element minOccurs="0" name="IsRequared" type="xs:boolean" />
+      <xs:element minOccurs="0" name="L" type="xs:int" />
+      <xs:element minOccurs="0" name="NumPos" type="xs:int" />
+      <xs:element minOccurs="0" name="Qu" type="xs:int" />
+      <xs:element minOccurs="0" name="R" type="xs:int" />
+      <xs:element minOccurs="0" name="T" type="xs:int" />
+      <xs:element minOccurs="0" name="Width" type="xs:int" />
+      <xs:element minOccurs="0" name="WorkHeight" type="xs:int" />
+      <xs:element minOccurs="0" name="WorkWidth" type="xs:int" />
+      <xs:element minOccurs="0" name="dCut" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Destination" nillable="true" type="tns:Destination" />
+  <xs:complexType name="ArrayOfPlate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Plate" nillable="true" type="tns:Plate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlate" nillable="true" type="tns:ArrayOfPlate" />
+  <xs:complexType name="Plate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Height" type="xs:int" />
+      <xs:element minOccurs="0" name="NumPos" type="xs:int" />
+      <xs:element minOccurs="0" name="Priority" type="xs:int" />
+      <xs:element minOccurs="0" name="Qu" type="xs:int" />
+      <xs:element minOccurs="0" name="Width" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Plate" nillable="true" type="tns:Plate" />
+  <xs:complexType name="ArrayOfDocument">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Document" nillable="true" type="tns:Document" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocument" nillable="true" type="tns:ArrayOfDocument" />
+  <xs:simpleType name="ExportMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DefaultReportPdf" />
+      <xs:enumeration value="Hegla" />
+      <xs:enumeration value="Intermac" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExportMode" nillable="true" type="tns:ExportMode" />
+</xs:schema>

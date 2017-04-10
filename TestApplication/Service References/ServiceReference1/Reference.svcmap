@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bc9654cf-fe10-49cd-bab3-604c56fde168" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/Opt/SquareOptService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SquareOptService.wsdl" MetadataType="Wsdl" ID="41150423-5f92-4905-80fe-9efa801273bd" SourceId="1" SourceUrl="http://localhost/Opt/SquareOptService.svc?wsdl" />
+    <MetadataFile FileName="SquareOptService.disco" MetadataType="Disco" ID="32d5b2f4-f0a4-4581-a960-8a6cc129bc16" SourceId="1" SourceUrl="http://localhost/Opt/SquareOptService.svc?disco" />
+    <MetadataFile FileName="SquareOptService.xsd" MetadataType="Schema" ID="0d2b187b-2367-4c62-bb8a-5c939139e5e9" SourceId="1" SourceUrl="http://localhost/Opt/SquareOptService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SquareOptService1.xsd" MetadataType="Schema" ID="d138242a-b598-490c-887c-74b1af745ece" SourceId="1" SourceUrl="http://localhost/Opt/SquareOptService.svc?xsd=xsd3" />
+    <MetadataFile FileName="SquareOptService2.xsd" MetadataType="Schema" ID="d266e15c-2625-412f-9435-6192d4d78b8b" SourceId="1" SourceUrl="http://localhost/Opt/SquareOptService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SquareOptService3.xsd" MetadataType="Schema" ID="99b100e2-286a-49fa-8aaa-f021a20a7669" SourceId="1" SourceUrl="http://localhost/Opt/SquareOptService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
