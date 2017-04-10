@@ -16,9 +16,8 @@ namespace TestApplication {
         }
 
         string companyCode = "test service";
-        //string uri = "http://localhost:2555/SquareOptService.svc";
-        string uri = "http://localhost/Opt/SquareOptService.svc";
-        //string uri = "http://193.242.148.147:1199/Opt/SquareOptService.svc";
+        //string uri = "http://localhost/Opt/SquareOptService.svc";
+        string uri = "http://89.16.101.6:1199/Opt/SquareOptService.svc";
 
         ServiceReference1.SquareOptServiceClient getClient() {
             var timeSpan = new TimeSpan(0, 30, 0);
